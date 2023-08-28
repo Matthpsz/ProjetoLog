@@ -12,7 +12,7 @@ namespace ProjetoLog.DAL
         SqlConnection conn = new SqlConnection();
         public Conexao()
         {
-            conn.ConnectionString = @"";
+            conn.ConnectionString = @"Data Source=DESKTOP-FLEUA6U\SQLEXPRESS;Initial Catalog=ProjetoLog;Integrated Security=True";
 
         }
         public SqlConnection conectar()

@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            tb_login = new TextBox();
+            tb_senha = new TextBox();
             pictureBox1 = new PictureBox();
             btn_Sair = new Button();
             btn_Entrar = new Button();
@@ -49,7 +49,6 @@
             label1.Size = new Size(51, 18);
             label1.TabIndex = 0;
             label1.Text = "Login:";
-
             // 
             // label2
             // 
@@ -61,19 +60,20 @@
             label2.TabIndex = 1;
             label2.Text = "Senha:";
             // 
-            // textBox1
+            // tb_login
             // 
-            textBox1.Location = new Point(235, 82);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(141, 23);
-            textBox1.TabIndex = 2;
+            tb_login.Location = new Point(235, 82);
+            tb_login.Name = "tb_login";
+            tb_login.Size = new Size(141, 23);
+            tb_login.TabIndex = 2;
             // 
-            // textBox2
+            // tb_senha
             // 
-            textBox2.Location = new Point(235, 125);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(141, 23);
-            textBox2.TabIndex = 3;
+            tb_senha.Location = new Point(235, 125);
+            tb_senha.Name = "tb_senha";
+            tb_senha.PasswordChar = '*';
+            tb_senha.Size = new Size(141, 23);
+            tb_senha.TabIndex = 3;
             // 
             // pictureBox1
             // 
@@ -103,6 +103,7 @@
             btn_Entrar.TabIndex = 6;
             btn_Entrar.Text = "Entrar";
             btn_Entrar.UseVisualStyleBackColor = true;
+            btn_Entrar.Click += btn_Entrar_Click;
             // 
             // btn_Cadastrar
             // 
@@ -123,8 +124,8 @@
             Controls.Add(btn_Entrar);
             Controls.Add(btn_Sair);
             Controls.Add(pictureBox1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(tb_senha);
+            Controls.Add(tb_login);
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
@@ -144,8 +145,8 @@
 
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox tb_login;
+        private TextBox tb_senha;
         private PictureBox pictureBox1;
         private Button btn_Sair;
         private Button btn_Entrar;

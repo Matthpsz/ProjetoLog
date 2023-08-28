@@ -15,7 +15,7 @@ namespace ProjetoLog.Modelo
         {
             LoginDaoComandos loginDao = new LoginDaoComandos();
             tem = loginDao.verificarLogin(login, senha);
-            if (loginDao.mensagem.Equals(""))
+            if (!loginDao.mensagem.Equals(""))
             {
                 this.mensagem = loginDao.mensagem;
             }

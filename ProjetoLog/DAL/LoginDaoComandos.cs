@@ -17,7 +17,7 @@ namespace ProjetoLog.DAL
         public bool verificarLogin(String login, String senha)
         {
             //comandos sql para verificar se tem no banco
-            cmd.CommandText = "select * from tbl_usuarios where email = @login and senha = @senha";
+            cmd.CommandText = "select * from tb_usuarios where email = @login and senha = @senha";
             cmd.Parameters.AddWithValue("@login", login);
             cmd.Parameters.AddWithValue("@senha", senha);
 
