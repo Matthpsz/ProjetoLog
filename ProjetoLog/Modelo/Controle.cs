@@ -24,6 +24,12 @@ namespace ProjetoLog.Modelo
         }
         public string cadastrar(String email, String senha, string confSenha) 
         {
+            LoginDaoComandos loginDao = new LoginDaoComandos();
+            this.mensagem = loginDao.cadastrar(email, senha, confSenha);
+            if(loginDao.tem)
+            {
+                this.tem = true;    
+            }
             return mensagem;
         }
     }

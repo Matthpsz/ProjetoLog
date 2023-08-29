@@ -31,9 +31,9 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            tb_login = new TextBox();
+            tb_senha = new TextBox();
+            tb_confSenha = new TextBox();
             btn_Cadastrar = new Button();
             SuspendLayout();
             // 
@@ -46,7 +46,6 @@
             label1.Size = new Size(47, 18);
             label1.TabIndex = 0;
             label1.Text = "Login";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -68,29 +67,31 @@
             label3.TabIndex = 2;
             label3.Text = "Confirmar Senha";
             // 
-            // textBox1
+            // tb_login
             // 
-            textBox1.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(29, 63);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(171, 22);
-            textBox1.TabIndex = 3;
+            tb_login.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tb_login.Location = new Point(29, 63);
+            tb_login.Name = "tb_login";
+            tb_login.Size = new Size(171, 22);
+            tb_login.TabIndex = 3;
             // 
-            // textBox2
+            // tb_senha
             // 
-            textBox2.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(29, 122);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(128, 22);
-            textBox2.TabIndex = 4;
+            tb_senha.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tb_senha.Location = new Point(29, 122);
+            tb_senha.Name = "tb_senha";
+            tb_senha.PasswordChar = '*';
+            tb_senha.Size = new Size(128, 22);
+            tb_senha.TabIndex = 4;
             // 
-            // textBox3
+            // tb_confSenha
             // 
-            textBox3.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(32, 181);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 22);
-            textBox3.TabIndex = 5;
+            tb_confSenha.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            tb_confSenha.Location = new Point(32, 181);
+            tb_confSenha.Name = "tb_confSenha";
+            tb_confSenha.PasswordChar = '*';
+            tb_confSenha.Size = new Size(125, 22);
+            tb_confSenha.TabIndex = 5;
             // 
             // btn_Cadastrar
             // 
@@ -101,6 +102,7 @@
             btn_Cadastrar.TabIndex = 6;
             btn_Cadastrar.Text = "Cadastrar";
             btn_Cadastrar.UseVisualStyleBackColor = true;
+            btn_Cadastrar.Click += btn_Cadastrar_Click;
             // 
             // Cadastro
             // 
@@ -108,16 +110,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(234, 277);
             Controls.Add(btn_Cadastrar);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(tb_confSenha);
+            Controls.Add(tb_senha);
+            Controls.Add(tb_login);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Cadastro";
             Text = "Cadastro";
-            Load += Cadastro_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -127,9 +128,9 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox tb_login;
+        private TextBox tb_senha;
+        private TextBox tb_confSenha;
         private Button btn_Cadastrar;
     }
 }
